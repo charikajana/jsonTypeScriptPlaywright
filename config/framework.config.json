@@ -1,0 +1,17 @@
+{
+    "report": {
+        "baseUrl": "http://your-ci-server-ip:8080",
+        "sendEmailInCI": true
+    },
+    "smtp": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "service": "gmail",
+        "user": "your-email@gmail.com",
+        "pass": "your-app-password"
+    },
+    "parallel": {
+        "defaultWorkers": 1,
+        "maxWorkers": 10
+    }
+}

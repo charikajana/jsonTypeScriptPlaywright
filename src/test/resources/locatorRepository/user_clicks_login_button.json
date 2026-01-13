@@ -1,0 +1,54 @@
+{
+    "stepFileName": "user_clicks_login_button",
+    "gherkinStep": "user clicks login button",
+    "normalizedStep": "user_clicks_login_button",
+    "stepType": "And",
+    "stepNumber": 3,
+    "status": "passed",
+    "actions": [
+        {
+            "actionNumber": 1,
+            "actionType": "CLICK",
+            "description": "Click Login Button",
+            "element": {
+                "type": "input",
+                "id": "ctl00_cphMainContent_btnLogin",
+                "name": "ctl00$cphMainContent$btnLogin",
+                "selector": "#ctl00_cphMainContent_btnLogin",
+                "cssSelector": "input#ctl00_cphMainContent_btnLogin",
+                "xpath": "//input[@id='ctl00_cphMainContent_btnLogin']",
+                "text": null,
+                "placeholder": null,
+                "dataTest": null,
+                "ariaLabel": null,
+                "role": "button",
+                "title": "Login",
+                "alt": null,
+                "className": "btn btn-primary btn-block",
+                "value": "Login",
+                "href": null,
+                "src": null,
+                "fingerprint": {
+                    "attributes": {
+                        "type": "submit",
+                        "role": "button"
+                    },
+                    "context": {
+                        "nearbyText": "Login",
+                        "parentTag": "div",
+                        "heading": "Login"
+                    }
+                }
+            }
+        },
+        {
+            "actionNumber": 2,
+            "actionType": "SCREENSHOT",
+            "description": "Post Login Screenshot"
+        }
+    ],
+    "metadata": {
+        "createdDate": "2026-01-13T10:20:00",
+        "totalActions": 2
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "jsontypescriptplaywright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "bdd": "node scripts/run-bdd.js",
+    "bdd:staging": "node scripts/run-bdd.js STAGING",
+    "bdd:tag": "node scripts/run-bdd.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.5.0",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.6",
+    "playwright-bdd": "^8.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

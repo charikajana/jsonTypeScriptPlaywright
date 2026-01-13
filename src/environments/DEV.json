@@ -1,0 +1,6 @@
+{
+    "BASE_URL": "https://demo.playwright.dev/todomvc/",
+    "API_URL": "https://api.playwright.dev",
+    "USER_NAME": "dev_user",
+    "ENVIRONMENT_NAME": "DEVELOPMENT"
+}

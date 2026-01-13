@@ -1,0 +1,34 @@
+2026-01-13T11:43:20.141Z INFO  [Universal]: Processing step: "Open Browser and Navigate to HotelBooker "https://hotelbooker.cert.sabre.com""
+2026-01-13T11:43:20.144Z INFO  [Executor]: Performing: NAVIGATE - Navigate to HotelBooker
+2026-01-13T11:43:29.099Z INFO  [Universal]: Processing step: "user enters username "QA_Sabre" and password "Te5t@1234""
+2026-01-13T11:43:29.100Z INFO  [Executor]: Performing: TYPE - Enter Username
+2026-01-13T11:43:29.107Z INFO  [SmartFinder]: Searching for: ctl00_cphMainContent_txtUserName
+2026-01-13T11:43:29.116Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-13T11:43:29.179Z INFO  [Executor]: Performing: TYPE - Enter Password
+2026-01-13T11:43:29.184Z INFO  [SmartFinder]: Searching for: ctl00_cphMainContent_txtPassword
+2026-01-13T11:43:29.245Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-13T11:43:29.320Z INFO  [Universal]: Processing step: "user clicks login button"
+2026-01-13T11:43:29.323Z INFO  [Executor]: Performing: CLICK - Click Login Button
+2026-01-13T11:43:29.331Z INFO  [SmartFinder]: Searching for: ctl00_cphMainContent_btnLogin
+2026-01-13T11:43:29.341Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-13T11:43:38.489Z INFO  [SmartWait]: Sabre Loading detected, waiting for it to hide...
+2026-01-13T11:43:38.957Z INFO  [Executor]: Performing: SCREENSHOT - Post Login Screenshot
+2026-01-13T11:43:39.029Z INFO  [Universal]: Processing step: "selects client "Test QA Client(Sabre)""
+2026-01-13T11:43:39.029Z INFO  [Executor]: Performing: CLICK - Select Client from List
+2026-01-13T11:43:39.032Z INFO  [SmartFinder]: Searching for: h2
+2026-01-13T11:43:39.037Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-13T11:43:39.133Z INFO  [SmartWait]: Sabre Loading detected, waiting for it to hide...
+2026-01-13T11:43:39.176Z INFO  [Executor]: Performing: WAIT_HIDDEN - Wait for Client Select Modal to Hide
+2026-01-13T11:43:39.181Z INFO  [SmartFinder]: Searching for: clientSelectModal
+2026-01-13T11:43:39.188Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-13T11:43:39.300Z INFO  [Universal]: Processing step: "Validate selected client should display on header"
+2026-01-13T11:43:39.301Z INFO  [Executor]: Performing: VERIFY_TEXT - Verify Client Name in Header
+2026-01-13T11:43:39.307Z INFO  [SmartFinder]: Searching for: lnkClientSelect
+2026-01-13T11:43:39.316Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-13T11:43:45.606Z INFO  [Universal]: Processing step: "user selects country "USA""
+2026-01-13T11:43:45.607Z INFO  [Universal]: StrongJSON not found for "user selects country "USA"". Attempting fallback to Custom Registry/Traditional Approach.
+2026-01-13T11:43:45.608Z INFO  [TraditionalSteps]: Executing from Traditional Approach since for this Step Json not found: Selecting country "USA"
+2026-01-13T11:43:45.657Z INFO  [TraditionalSteps]: Successfully selected country: USA
+2026-01-13T11:43:45.660Z INFO  [Universal]: Processing step: "enters location "Dallas" from suggestion"
+2026-01-13T11:43:45.661Z INFO  [Universal]: StrongJSON not found for "enters location "Dallas" from suggestion". Attempting fallback to Custom Registry/Traditional Approach.
+2026-01-13T11:43:45.663Z INFO  [LocationSteps]: Executing from Traditional Approach since for this Step Json not found: Entering location "Dallas" from suggestion

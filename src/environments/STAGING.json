@@ -1,0 +1,6 @@
+{
+    "BASE_URL": "https://todomvc.com/examples/vanillajs/",
+    "API_URL": "https://api.staging.todomvc.com",
+    "USER_NAME": "staging_user",
+    "ENVIRONMENT_NAME": "STAGING"
+}

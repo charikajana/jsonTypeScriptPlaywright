@@ -1,0 +1,527 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Brand" [ref=e5] [cursor=pointer]:
+        - /url: Default.aspx
+        - img "Brand" [ref=e6]
+      - generic [ref=e7]:
+        - list
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "26" [ref=e10] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e12]: "26"
+          - listitem [ref=e13]:
+            - link "Test QA Client(Sabre)" [ref=e14] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e15]:
+            - button "Tools " [ref=e16] [cursor=pointer]:
+              - text: Tools
+              - generic [ref=e18]: 
+          - listitem [ref=e19]
+          - listitem [ref=e20]:
+            - button "Welcome , QASabre Test  " [ref=e21] [cursor=pointer]:
+              - text: Welcome , QASabre Test
+              - generic [ref=e22]:
+                - generic [ref=e23]: 
+                - generic [ref=e24]: 
+  - text:  
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - list [ref=e29]:
+          - link "Make a booking" [ref=e30] [cursor=pointer]:
+            - /url: "javascript: showMakeBooking();"
+          - link "View bookings" [ref=e31] [cursor=pointer]:
+            - /url: "javascript: showViewBooking();"
+        - generic [ref=e32]:
+          - tabpanel [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]:
+                - generic [ref=e36]:
+                  - generic [ref=e37]: Arrival Date
+                  - textbox "Arrival Date" [ref=e38]: 1/14/2026
+                - generic [ref=e39]:
+                  - generic [ref=e40]: Nights
+                  - textbox "Nights" [ref=e41]: "1"
+                - generic [ref=e42]:
+                  - generic [ref=e43]: Rooms
+                  - combobox "Rooms" [ref=e44]:
+                    - option "1" [selected]
+                    - option "2"
+                    - option "3"
+                    - option "4"
+                - generic [ref=e45]:
+                  - generic [ref=e46]: Guests
+                  - combobox "Guests" [ref=e47]:
+                    - option "1" [selected]
+                    - option "2"
+                    - option "3"
+              - generic [ref=e49]:
+                - generic [ref=e50]: Country
+                - combobox "Country" [ref=e51]:
+                  - option "Algeria"
+                  - option "American Samoa"
+                  - option "Andorra"
+                  - option "Angola"
+                  - option "Anguilla"
+                  - option "Antigua"
+                  - option "Argentina"
+                  - option "Armenia"
+                  - option "Aruba"
+                  - option "Australia"
+                  - option "Austria"
+                  - option "Azerbaijan"
+                  - option "Bahamas"
+                  - option "Bahrain"
+                  - option "Bangladesh"
+                  - option "Barbados"
+                  - option "Belarus"
+                  - option "Belgium"
+                  - option "Belize"
+                  - option "Benin"
+                  - option "Bermuda"
+                  - option "Bhutan"
+                  - option "Bolivia"
+                  - option "Bosnia Herzegovina"
+                  - option "Botswana"
+                  - option "Brazil"
+                  - option "British Virgin Is"
+                  - option "Brunei"
+                  - option "Bulgaria"
+                  - option "Burkina Faso"
+                  - option "Burundi"
+                  - option "Cambodia"
+                  - option "Cameroon"
+                  - option "Canada"
+                  - option "Canton"
+                  - option "Cape Verde Islands"
+                  - option "Caroline Islands"
+                  - option "Cayman Islands"
+                  - option "Central African Rep"
+                  - option "Chad"
+                  - option "Chile"
+                  - option "China"
+                  - option "Christmas Island"
+                  - option "Cocos Islands"
+                  - option "Colombia"
+                  - option "Comoro Island"
+                  - option "Congo"
+                  - option "Cook Islands"
+                  - option "Costa Rica"
+                  - option "Croatia"
+                  - option "Cuba"
+                  - option "Cyprus"
+                  - option "Czech Republic"
+                  - option "Denmark"
+                  - option "Djibouti"
+                  - option "Dominica"
+                  - option "Dominican Republic"
+                  - option "East Timor"
+                  - option "Ecuador"
+                  - option "Egypt"
+                  - option "El Salvador"
+                  - option "Equatorial Guinea"
+                  - option "Eritrea"
+                  - option "Estonia"
+                  - option "Ethiopia"
+                  - option "European Community"
+                  - option "Faeroe Islands"
+                  - option "Falkland Islands"
+                  - option "Fiji"
+                  - option "Finland"
+                  - option "France"
+                  - option "French Guiana"
+                  - option "French Polynesia"
+                  - option "Gabon"
+                  - option "Gambia"
+                  - option "Georgia"
+                  - option "Germany"
+                  - option "Ghana"
+                  - option "Gibraltar"
+                  - option "Greece"
+                  - option "Greenland"
+                  - option "Grenada"
+                  - option "Guadeloupe"
+                  - option "Guam"
+                  - option "Guatemala"
+                  - option "Guernsey"
+                  - option "Guinea"
+                  - option "Guinea Bissau"
+                  - option "Guyana"
+                  - option "Haiti"
+                  - option "Honduras"
+                  - option "Hong Kong"
+                  - option "Hungary"
+                  - option "Iceland"
+                  - option "India"
+                  - option "Indonesia"
+                  - option "Iran"
+                  - option "Iraq"
+                  - option "Ireland"
+                  - option "Isle of Man"
+                  - option "Israel"
+                  - option "Italy"
+                  - option "Ivory Coast"
+                  - option "Jamaica"
+                  - option "Japan"
+                  - option "Jersey"
+                  - option "Johnston Island"
+                  - option "Jordan"
+                  - option "Kazakhstan"
+                  - option "Kenya"
+                  - option "Kiribati"
+                  - option "Kosovo"
+                  - option "Kuwait"
+                  - option "Kyrgyzstan"
+                  - option "Laos"
+                  - option "Latvia"
+                  - option "Lebanon"
+                  - option "Lesotho"
+                  - option "Liberia"
+                  - option "Libya"
+                  - option "Liechtenstein"
+                  - option "Lithuania"
+                  - option "Luxembourg"
+                  - option "Macau"
+                  - option "Macedonia"
+                  - option "Madagascar"
+                  - option "Malawi"
+                  - option "Malaysia"
+                  - option "Maldives"
+                  - option "Mali"
+                  - option "Malta"
+                  - option "Marshall Islands"
+                  - option "Martinique"
+                  - option "Mauritania"
+                  - option "Mauritius"
+                  - option "Mayotte"
+                  - option "Mexico"
+                  - option "Micronesia"
+                  - option "Moldova"
+                  - option "Monaco"
+                  - option "Mongolia"
+                  - option "Montenegro"
+                  - option "Montserrat"
+                  - option "Morocco"
+                  - option "Mozambique"
+                  - option "Myanmar"
+                  - option "Namibia"
+                  - option "Nauru"
+                  - option "Nepal"
+                  - option "Netherland Antilles"
+                  - option "Netherlands"
+                  - option "New Caledonia"
+                  - option "New Zealand"
+                  - option "Nicaragua"
+                  - option "Niger"
+                  - option "Nigeria"
+                  - option "Niue"
+                  - option "No Marianas"
+                  - option "Norfolk Island"
+                  - option "North Korea"
+                  - option "Norway"
+                  - option "Oman"
+                  - option "Pakistan"
+                  - option "Palau Islands"
+                  - option "Panama"
+                  - option "Papua New Guinea"
+                  - option "Paraguay"
+                  - option "Peru"
+                  - option "Philippines"
+                  - option "Poland"
+                  - option "Portugal"
+                  - option "Puerto Rico"
+                  - option "Qatar"
+                  - option "Reunion Islands"
+                  - option "Romania"
+                  - option "Russia"
+                  - option "Rwanda"
+                  - option "Saint Helena"
+                  - option "Samoa"
+                  - option "San Marino"
+                  - option "Sao Tome"
+                  - option "Saudi Arabia"
+                  - option "Senegal"
+                  - option "Serbia"
+                  - option "Seychelles"
+                  - option "Sierra Leone"
+                  - option "Singapore"
+                  - option "Slovakia"
+                  - option "Slovenia"
+                  - option "Solomon Islands"
+                  - option "Somalia"
+                  - option "South Africa"
+                  - option "South Korea"
+                  - option "South Sudan"
+                  - option "Spain"
+                  - option "Sri Lanka"
+                  - option "St Helena"
+                  - option "St Kitts"
+                  - option "St Lucia"
+                  - option "St Pierre Miquelon"
+                  - option "St Vincent and the Grenadines"
+                  - option "Sudan"
+                  - option "Suriname"
+                  - option "Swaziland"
+                  - option "Sweden"
+                  - option "Switzerland"
+                  - option "Syria"
+                  - option "Taiwan"
+                  - option "Tajikistan"
+                  - option "Tanzania"
+                  - option "Thailand"
+                  - option "Togo"
+                  - option "Tonga Island"
+                  - option "Trinidad & Tobago"
+                  - option "Tunisia"
+                  - option "Turkey"
+                  - option "Turkmenistan"
+                  - option "Turks Caicos"
+                  - option "Tuvalu Island"
+                  - option "Uganda"
+                  - option "Ukraine"
+                  - option "United Arab Emirates"
+                  - option "United Kingdom"
+                  - option "Uruguay"
+                  - option "US Virgin Islands"
+                  - option "USA" [selected]
+                  - option "Uzbekistan"
+                  - option "Vanuatu"
+                  - option "Venezuela"
+                  - option "Vietnam"
+                  - option "Wake Island"
+                  - option "Wallis Futuna"
+                  - option "Yemen Republic"
+                  - option "Zaire"
+                  - option "Zambia"
+                  - option "Zimbabwe"
+              - generic [ref=e53]:
+                - generic [ref=e54]: Location
+                - textbox "Location" [ref=e55]:
+                  - /placeholder: Place, Postcode, Airport, Train Station...
+              - generic [ref=e57]:
+                - generic [ref=e58]: Hotel Name
+                - textbox "Hotel Name" [ref=e59]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Distance
+                - combobox "Distance" [ref=e63]:
+                  - option "1 Miles"
+                  - option "2 Miles"
+                  - option "5 Miles"
+                  - option "10 Miles"
+                  - option "15 Miles"
+                  - option "20 Miles" [selected]
+                  - option "25 Miles"
+            - text:  
+            - generic [ref=e64]:
+              - link "Advanced Options " [ref=e67] [cursor=pointer]:
+                - /url: "javascript: showAdvancedSearchOptions();"
+                - text: Advanced Options
+                - generic [ref=e68]: 
+              - button "Search" [ref=e71] [cursor=pointer]
+          - text:  
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: Booking Details
+          - link "" [ref=e76] [cursor=pointer]:
+            - /url: javascript:__doPostBack('ctl00$expandBookingDetails','')
+            - generic [ref=e77]: 
+        - generic [ref=e78]:
+          - generic: 
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - text: 
+              - link "Add Contact" [ref=e82] [cursor=pointer]:
+                - /url: javascript:__doPostBack('ctl00$addContactLink','')
+            - generic [ref=e83]:
+              - text: 
+              - link "Add Travellers" [ref=e85] [cursor=pointer]:
+                - /url: javascript:__doPostBack('ctl00$addTravellersLink','')
+            - text: 
+            - link "Retrieve PNR" [ref=e89] [cursor=pointer]:
+              - /url: "#"
+      - text: 
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - heading [level=1] [ref=e93]
+        - button "Open Bookings " [ref=e96] [cursor=pointer]:
+          - heading "Open Bookings " [level=1] [ref=e97]:
+            - text: Open Bookings
+            - generic [ref=e98]: 
+      - generic [ref=e100]:
+        - button "By Arrival Date " [ref=e102] [cursor=pointer]:
+          - text: By Arrival Date
+          - generic [ref=e104]: 
+        - button "Oldest " [ref=e106] [cursor=pointer]:
+          - text: Oldest
+          - generic [ref=e107]: 
+      - generic [ref=e108]:
+        - generic "Requested" [ref=e110] [cursor=pointer]:
+          - generic [ref=e111]:
+            - link "286565" [ref=e113]:
+              - /url: Booking.aspx?Id=286565
+            - generic [ref=e115]: AmeriSuites Dallas West End
+            - generic [ref=e116]: "Rooms: 1"
+            - generic [ref=e117]: "Dates: 1/13/2026 - 1/14/2026"
+            - link "" [ref=e119]:
+              - /url: "javascript: ShowBookingProducts(286565);"
+              - generic [ref=e120]: 
+          - text: 
+        - generic "Requested" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]:
+            - link "286566" [ref=e125]:
+              - /url: Booking.aspx?Id=286566
+            - generic [ref=e127]: AmeriSuites Dallas West End
+            - generic [ref=e128]: "Rooms: 1"
+            - generic [ref=e129]: "Dates: 1/13/2026 - 1/14/2026"
+            - link "" [ref=e131]:
+              - /url: "javascript: ShowBookingProducts(286566);"
+              - generic [ref=e132]: 
+          - text: 
+        - generic "Requested" [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]:
+            - link "286568" [ref=e137]:
+              - /url: Booking.aspx?Id=286568
+            - generic [ref=e139]: AmeriSuites Dallas West End
+            - generic [ref=e140]: "Rooms: 1"
+            - generic [ref=e141]: "Dates: 1/13/2026 - 1/14/2026"
+            - link "" [ref=e143]:
+              - /url: "javascript: ShowBookingProducts(286568);"
+              - generic [ref=e144]: 
+          - text: 
+        - generic "Requested" [ref=e146] [cursor=pointer]:
+          - generic [ref=e147]:
+            - link "286569" [ref=e149]:
+              - /url: Booking.aspx?Id=286569
+            - generic [ref=e151]: AmeriSuites Dallas West End
+            - generic [ref=e152]: "Rooms: 1"
+            - generic [ref=e153]: "Dates: 1/13/2026 - 1/14/2026"
+            - link "" [ref=e155]:
+              - /url: "javascript: ShowBookingProducts(286569);"
+              - generic [ref=e156]: 
+          - text: 
+        - generic "Requested" [ref=e158] [cursor=pointer]:
+          - generic [ref=e159]:
+            - link "286573" [ref=e161]:
+              - /url: Booking.aspx?Id=286573
+            - generic [ref=e163]: AmeriSuites Dallas West End
+            - generic [ref=e164]: "Rooms: 1"
+            - generic [ref=e165]: "Dates: 1/14/2026 - 1/15/2026"
+            - link "" [ref=e167]:
+              - /url: "javascript: ShowBookingProducts(286573);"
+              - generic [ref=e168]: 
+          - text: 
+        - generic "Requested" [ref=e170] [cursor=pointer]:
+          - generic [ref=e171]:
+            - link "286665" [ref=e173]:
+              - /url: Booking.aspx?Id=286665
+            - generic [ref=e175]: AmeriSuites Dallas West End
+            - generic [ref=e176]: "Rooms: 1"
+            - generic [ref=e177]: "Dates: 2/5/2026 - 2/6/2026"
+            - link "" [ref=e179]:
+              - /url: "javascript: ShowBookingProducts(286665);"
+              - generic [ref=e180]: 
+          - text: 
+        - generic "Requested" [ref=e182] [cursor=pointer]:
+          - generic [ref=e183]:
+            - link "286718" [ref=e185]:
+              - /url: Booking.aspx?Id=286718
+            - generic [ref=e187]: AmeriSuites Dallas West End
+            - generic [ref=e188]: "Rooms: 1"
+            - generic [ref=e189]: "Dates: 2/7/2026 - 2/8/2026"
+            - link "" [ref=e191]:
+              - /url: "javascript: ShowBookingProducts(286718);"
+              - generic [ref=e192]: 
+          - text: 
+        - generic "Requested" [ref=e194] [cursor=pointer]:
+          - generic [ref=e195]:
+            - link "286731" [ref=e197]:
+              - /url: Booking.aspx?Id=286731
+            - generic [ref=e199]: AmeriSuites Dallas West End
+            - generic [ref=e200]: "Rooms: 1"
+            - generic [ref=e201]: "Dates: 2/8/2026 - 2/9/2026"
+            - link "" [ref=e203]:
+              - /url: "javascript: ShowBookingProducts(286731);"
+              - generic [ref=e204]: 
+          - text: 
+        - generic "Requested" [ref=e206] [cursor=pointer]:
+          - generic [ref=e207]:
+            - link "286747" [ref=e209]:
+              - /url: Booking.aspx?Id=286747
+            - generic [ref=e211]: AmeriSuites Dallas West End
+            - generic [ref=e212]: "Rooms: 1"
+            - generic [ref=e213]: "Dates: 2/12/2026 - 2/13/2026"
+            - link "" [ref=e215]:
+              - /url: "javascript: ShowBookingProducts(286747);"
+              - generic [ref=e216]: 
+          - text: 
+        - generic "Requested" [ref=e218] [cursor=pointer]:
+          - generic [ref=e219]:
+            - link "285775" [ref=e221]:
+              - /url: Booking.aspx?Id=285775
+            - generic [ref=e223]: Philadelphia Center City Resid...
+            - generic [ref=e224]: "Rooms: 2"
+            - generic [ref=e225]: "Dates: 2/24/2026 - 2/26/2026"
+            - link "" [ref=e227]:
+              - /url: "javascript: ShowBookingProducts(285775);"
+              - generic [ref=e228]: 
+          - text:  
+        - generic "Requested" [ref=e230] [cursor=pointer]:
+          - generic [ref=e231]:
+            - link "286012" [ref=e233]:
+              - /url: Booking.aspx?Id=286012
+            - generic [ref=e235]: AmeriSuites Dallas West End
+            - generic [ref=e236]: "Rooms: 1"
+            - generic [ref=e237]: "Dates: 2/25/2026 - 2/26/2026"
+            - link "" [ref=e239]:
+              - /url: "javascript: ShowBookingProducts(286012);"
+              - generic [ref=e240]: 
+          - text: 
+        - generic "Requested" [ref=e242] [cursor=pointer]:
+          - generic [ref=e243]:
+            - link "285410" [ref=e245]:
+              - /url: Booking.aspx?Id=285410
+            - generic [ref=e247]: AmeriSuites Dallas West End
+            - generic [ref=e248]: "Rooms: 2"
+            - generic [ref=e249]: "Dates: 3/18/2026 - 3/20/2026"
+            - link "" [ref=e251]:
+              - /url: "javascript: ShowBookingProducts(285410);"
+              - generic [ref=e252]: 
+          - text:  
+        - generic "Requested" [ref=e254] [cursor=pointer]:
+          - generic [ref=e255]:
+            - link "285417" [ref=e257]:
+              - /url: Booking.aspx?Id=285417
+            - generic [ref=e259]: AmeriSuites Dallas West End
+            - generic [ref=e260]: "Rooms: 2"
+            - generic [ref=e261]: "Dates: 3/18/2026 - 3/20/2026"
+            - link "" [ref=e263]:
+              - /url: "javascript: ShowBookingProducts(285417);"
+              - generic [ref=e264]: 
+          - text:  
+        - generic "Requested" [ref=e266] [cursor=pointer]:
+          - generic [ref=e267]:
+            - link "286745" [ref=e269]:
+              - /url: Booking.aspx?Id=286745
+            - generic [ref=e271]: AmeriSuites Dallas West End
+            - generic [ref=e272]: "Rooms: 1"
+            - generic [ref=e273]: "Dates: 4/13/2026 - 4/14/2026"
+            - link "" [ref=e275]:
+              - /url: "javascript: ShowBookingProducts(286745);"
+              - generic [ref=e276]: 
+          - text: 
+  - contentinfo:
+    - generic:
+      - generic [ref=e277]:
+        - text: Sabre 2026 © Copyright. All rights reserved | 5.15 |
+        - link "Terms & Conditions" [ref=e278] [cursor=pointer]:
+          - /url: Terms.aspx
+        - text: "|"
+        - link "Privacy" [ref=e279] [cursor=pointer]:
+          - /url: https://www.sabre.com/about/privacy/
+      - img "Powered By Sabre" [ref=e280]
+```

@@ -1,0 +1,84 @@
+{
+    "stepFileName": "selects_client_param_",
+    "gherkinStep": "selects client \"Test QA Client(Sabre)\"",
+    "normalizedStep": "selects_client_param_",
+    "stepType": "And",
+    "stepNumber": 4,
+    "status": "passed",
+    "actions": [
+        {
+            "actionNumber": 1,
+            "actionType": "CLICK",
+            "description": "Select Client from List",
+            "element": {
+                "type": "h2",
+                "id": null,
+                "name": null,
+                "selector": null,
+                "cssSelector": "h2:text-is('Test QA Client(Sabre)')",
+                "xpath": "//div[@id='clientList']//h2[text()='Test QA Client(Sabre)']",
+                "text": "Test QA Client(Sabre)",
+                "placeholder": null,
+                "dataTest": null,
+                "ariaLabel": null,
+                "role": null,
+                "title": null,
+                "alt": null,
+                "className": null,
+                "value": null,
+                "href": null,
+                "src": null,
+                "fingerprint": {
+                    "attributes": {
+                        "type": null,
+                        "role": null
+                    },
+                    "context": {
+                        "nearbyText": "Test QA Client(Sabre)",
+                        "parentTag": "div",
+                        "heading": "Client Select"
+                    }
+                }
+            }
+        },
+        {
+            "actionNumber": 2,
+            "actionType": "WAIT_HIDDEN",
+            "description": "Wait for Client Select Modal to Hide",
+            "element": {
+                "type": "div",
+                "id": "clientSelectModal",
+                "name": null,
+                "selector": "#clientSelectModal",
+                "cssSelector": "#clientSelectModal",
+                "xpath": "//div[@id='clientSelectModal']",
+                "text": null,
+                "placeholder": null,
+                "dataTest": null,
+                "ariaLabel": null,
+                "role": "dialog",
+                "title": null,
+                "alt": null,
+                "className": "modal fade show",
+                "value": null,
+                "href": null,
+                "src": null,
+                "fingerprint": {
+                    "attributes": {
+                        "type": null,
+                        "role": "dialog"
+                    },
+                    "context": {
+                        "nearbyText": "Client Select",
+                        "parentTag": "form",
+                        "heading": "Client Select"
+                    }
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "createdDate": "2026-01-13T10:20:00",
+        "totalActions": 2
+    }
+}

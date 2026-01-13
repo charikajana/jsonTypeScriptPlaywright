@@ -1,0 +1,50 @@
+{
+    "stepFileName": "validate_selected_client_should_display_on_header",
+    "gherkinStep": "Validate selected client should display on header",
+    "normalizedStep": "validate_selected_client_should_display_on_header",
+    "stepType": "Then",
+    "stepNumber": 5,
+    "status": "passed",
+    "actions": [
+        {
+            "actionNumber": 1,
+            "actionType": "VERIFY_TEXT",
+            "description": "Verify Client Name in Header",
+            "element": {
+                "type": "a",
+                "id": "lnkClientSelect",
+                "name": null,
+                "selector": "#lnkClientSelect",
+                "cssSelector": "a#lnkClientSelect",
+                "xpath": "//a[@id='lnkClientSelect']",
+                "text": "Test QA Client(Sabre)",
+                "placeholder": null,
+                "dataTest": null,
+                "ariaLabel": null,
+                "role": null,
+                "title": null,
+                "alt": null,
+                "className": null,
+                "value": null,
+                "href": "#",
+                "src": null,
+                "fingerprint": {
+                    "attributes": {
+                        "type": null,
+                        "role": null
+                    },
+                    "context": {
+                        "nearbyText": "Clients",
+                        "parentTag": "li",
+                        "heading": "Header"
+                    }
+                }
+            },
+            "value": "Test QA Client(Sabre)"
+        }
+    ],
+    "metadata": {
+        "createdDate": "2026-01-13T10:20:00",
+        "totalActions": 1
+    }
+}
