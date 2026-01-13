@@ -20,5 +20,16 @@
     "playwright-bdd": "^8.4.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charikajana/jsonTypeScriptPlaywright.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charikajana/jsonTypeScriptPlaywright/issues"
+  },
+  "homepage": "https://github.com/charikajana/jsonTypeScriptPlaywright#readme"
 }
