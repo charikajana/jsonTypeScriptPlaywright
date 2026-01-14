@@ -1,1 +1,9 @@
 node_modules
+logs
+.idea
+.features-gen
+allure-results
+allure-report
+PlaywrightAutomationResult
+test-results
+results.xml

@@ -8,24 +8,35 @@
     "actions": [
         {
             "actionNumber": 1,
+            "actionType": "VERIFY_ELEMENT",
+            "description": "Verify search results container is visible",
+            "element": {
+                "type": "div",
+                "selector": "#search",
+                "cssSelector": "#search",
+                "xpath": "//*[@id='search']"
+            }
+        },
+        {
+            "actionNumber": 2,
             "actionType": "VERIFY_TEXT",
             "description": "Verify search results contain text",
             "element": {
-                "type": "body",
-                "selector": "body",
-                "cssSelector": "body",
-                "xpath": "//body"
+                "type": "div",
+                "selector": "#search",
+                "cssSelector": "#search",
+                "xpath": "//*[@id='search']"
             },
             "value": "___RUNTIME_PARAMETER___"
         },
         {
-            "actionNumber": 2,
+            "actionNumber": 3,
             "actionType": "SCREENSHOT",
             "description": "Verification screenshot"
         }
     ],
     "metadata": {
-        "createdDate": "2026-01-14T13:47:00",
-        "totalActions": 2
+        "createdDate": "2026-01-14T14:50:00",
+        "totalActions": 3
     }
 }

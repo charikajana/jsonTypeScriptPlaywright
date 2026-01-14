@@ -157,7 +157,7 @@
                   - option "Hong Kong"
                   - option "Hungary"
                   - option "Iceland"
-                  - option "India"
+                  - option "India" [selected]
                   - option "Indonesia"
                   - option "Iran"
                   - option "Iraq"
@@ -288,7 +288,7 @@
                   - option "United Kingdom"
                   - option "Uruguay"
                   - option "US Virgin Islands"
-                  - option "USA" [selected]
+                  - option "USA"
                   - option "Uzbekistan"
                   - option "Vanuatu"
                   - option "Venezuela"
