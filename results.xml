@@ -1,0 +1,32 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.057267">
+<testsuite name="src\features\SimpleSearch.feature.spec.js" timestamp="2026-01-14T08:22:15.991Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.564" errors="0">
+<testcase name="Simple Web Search › Verify Google search functionality" classname="src\features\SimpleSearch.feature.spec.js" time="5.564">
+<system-out>
+<![CDATA[[Registry] Registered manual step: /user selects country "(.*)"/
+[Registry] Registered manual step: /enters location "(.*)" from suggestion/
+2026-01-14T08:22:17.369Z INFO  [Universal]: Processing step: "I navigate to "https://www.google.com""
+2026-01-14T08:22:17.371Z INFO  [Executor]: Performing: NAVIGATE - Navigate to URL
+2026-01-14T08:22:21.012Z INFO  [Executor]: Performing: SCREENSHOT - Page after navigation
+2026-01-14T08:22:21.108Z INFO  [Universal]: Processing step: "I search for "Playwright Automation""
+2026-01-14T08:22:21.109Z INFO  [Executor]: Performing: TYPE - Enter search text
+2026-01-14T08:22:21.116Z INFO  [SmartFinder]: Searching for: input
+2026-01-14T08:22:21.139Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-14T08:22:21.244Z INFO  [Executor]: Performing: PRESS_KEY - Press Enter
+2026-01-14T08:22:21.283Z INFO  [Executor]: Performing: WAIT_NAVIGATION - Wait for results to load
+2026-01-14T08:22:21.287Z INFO  [Executor]: Performing: SCREENSHOT - After search
+2026-01-14T08:22:21.583Z INFO  [Universal]: Processing step: "I should see search results related to "Playwright""
+2026-01-14T08:22:21.584Z INFO  [Executor]: Performing: VERIFY_TEXT - Verify search results contain text
+2026-01-14T08:22:22.328Z INFO  [SmartFinder]: Searching for: body
+2026-01-14T08:22:22.355Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-14T08:22:22.387Z INFO  [Executor]: Performing: SCREENSHOT - Verification screenshot
+
+[[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

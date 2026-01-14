@@ -2,34 +2,28 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug BDD Tests (VS Code)",
             "type": "node",
             "request": "launch",
-            "name": "Debug BDD Runner",
-            "program": "${workspaceFolder}/scripts/run-bdd.js",
+            "program": "/node_modules/@playwright/test/cli.js",
             "args": [
-                "DEV"
-            ], // You can change this to STAGING or add tags
+                "test"
+            ],
             "env": {
                 "TEST_ENV": "DEV"
             },
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "preLaunchTask": "generate-bdd"
         },
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug Current Test File",
-            "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+            "name": "Debug BDD Runner Script",
+            "program": "/scripts/run-bdd.js",
             "args": [
-                "test",
-                "${file}",
-                "--headed",
-                "--workers=1"
+                "DEV"
             ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "console": "integratedTerminal"
         }
     ]
 }

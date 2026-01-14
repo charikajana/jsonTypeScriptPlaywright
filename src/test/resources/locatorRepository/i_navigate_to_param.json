@@ -1,0 +1,25 @@
+{
+    "stepFileName": "i_navigate_to_param",
+    "gherkinStep": "I navigate to \"https://www.google.com\"",
+    "normalizedStep": "i_navigate_to_param",
+    "stepType": "Given",
+    "stepNumber": 1,
+    "status": "passed",
+    "actions": [
+        {
+            "actionNumber": 1,
+            "actionType": "NAVIGATE",
+            "description": "Navigate to URL",
+            "value": "___RUNTIME_PARAMETER___"
+        },
+        {
+            "actionNumber": 2,
+            "actionType": "SCREENSHOT",
+            "description": "Page after navigation"
+        }
+    ],
+    "metadata": {
+        "createdDate": "2026-01-14T13:45:00",
+        "totalActions": 2
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "stepFileName": "i_should_see_search_results_related_to_param",
+    "gherkinStep": "I should see search results related to \"Playwright\"",
+    "normalizedStep": "i_should_see_search_results_related_to_param",
+    "stepType": "Then",
+    "stepNumber": 3,
+    "status": "passed",
+    "actions": [
+        {
+            "actionNumber": 1,
+            "actionType": "VERIFY_TEXT",
+            "description": "Verify search results contain text",
+            "element": {
+                "type": "body",
+                "selector": "body",
+                "cssSelector": "body",
+                "xpath": "//body"
+            },
+            "value": "___RUNTIME_PARAMETER___"
+        },
+        {
+            "actionNumber": 2,
+            "actionType": "SCREENSHOT",
+            "description": "Verification screenshot"
+        }
+    ],
+    "metadata": {
+        "createdDate": "2026-01-14T13:47:00",
+        "totalActions": 2
+    }
+}

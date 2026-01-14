@@ -25,6 +25,10 @@ const envArg = args.find(a => {
 // Find Tag Arg
 const tagArg = args.find(a => a.startsWith('@') || a.includes(' and ') || a.includes(' or ') || a.startsWith('not '));
 
+// Find Browser Arg
+const browserArg = args.find(a => a.startsWith('--browser='));
+const browser = browserArg ? browserArg.split('=')[1] : 'chromium';
+
 // Find Workers Arg
 const workerArg = args.find(a => a.startsWith('--workers=') || /^\d+$/.test(a));
 
@@ -49,13 +53,19 @@ const currentWorkers = process.env.PLAYWRIGHT_WORKERS || 'Default';
 
 console.log(`--- Starting BDD Execution ---`);
 console.log(`Environment: ${currentEnv}`);
+console.log(`Browser:     ${browser}`);
 console.log(`Tags:        ${currentTags}`);
 console.log(`Workers:     ${currentWorkers}`);
 
 const runCommand = (cmd, args) => {
     const isWindows = process.platform === 'win32';
     const command = isWindows ? `${cmd}.cmd` : cmd;
-    return spawnSync(command, args, { stdio: 'inherit', shell: true, env: process.env, cwd: projectRoot });
+    const result = spawnSync(command, args, { stdio: 'inherit', shell: true, env: process.env, cwd: projectRoot });
+    if (result.status !== 0) {
+        console.error(`Command failed with exit code ${result.status}: ${cmd} ${args.join(' ')}`);
+        process.exit(result.status || 1);
+    }
+    return result;
 };
 
 // 1. Run bddgen
@@ -63,8 +73,8 @@ console.log('> Generating BDD tests...');
 runCommand('npx', ['bddgen']);
 
 // 2. Run playwright test
-console.log('> Running Playwright tests...');
-runCommand('npx', ['playwright', 'test']);
+console.log(`> Running Playwright tests on ${browser}...`);
+runCommand('npx', ['playwright', 'test', '--project', browser]);
 
 console.log(`--- Execution Finished ---`);
 

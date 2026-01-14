@@ -1,0 +1,42 @@
+{
+    "stepFileName": "i_search_for_param",
+    "gherkinStep": "I search for \"Playwright Automation\"",
+    "normalizedStep": "i_search_for_param",
+    "stepType": "When",
+    "stepNumber": 2,
+    "status": "passed",
+    "actions": [
+        {
+            "actionNumber": 1,
+            "actionType": "TYPE",
+            "description": "Enter search text",
+            "element": {
+                "type": "input",
+                "selector": "input[name='q'], textarea[name='q']",
+                "cssSelector": "[name='q']",
+                "xpath": "//*[@name='q']"
+            },
+            "value": "___RUNTIME_PARAMETER___"
+        },
+        {
+            "actionNumber": 2,
+            "actionType": "PRESS_KEY",
+            "description": "Press Enter",
+            "value": "Enter"
+        },
+        {
+            "actionNumber": 3,
+            "actionType": "WAIT_NAVIGATION",
+            "description": "Wait for results to load"
+        },
+        {
+            "actionNumber": 4,
+            "actionType": "SCREENSHOT",
+            "description": "After search"
+        }
+    ],
+    "metadata": {
+        "createdDate": "2026-01-14T13:46:00",
+        "totalActions": 4
+    }
+}

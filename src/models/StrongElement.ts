@@ -41,6 +41,7 @@ export interface Action {
     description: string;
     element?: StrongElement;
     value?: string;
+    optional?: boolean;
 }
 
 export interface StepJson {

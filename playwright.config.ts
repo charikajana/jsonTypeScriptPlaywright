@@ -21,11 +21,11 @@ export default defineConfig({
         ['html', {
             printSteps: true,
             outputFolder: 'PlaywrightAutomationResult'
-        }
-        ]
+        }],
+        ['allure-playwright', { resultsDir: 'allure-results' }]
     ],
     use: {
-        trace: 'on-first-retry',
+        trace: 'on',
         screenshot: 'on',
         video: 'on',
     },
@@ -33,6 +33,14 @@ export default defineConfig({
         {
             name: 'chromium',
             use: { ...devices['Desktop Chrome'] },
+        },
+        {
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
+        },
+        {
+            name: 'webkit',
+            use: { ...devices['Desktop Safari'] },
         },
     ],
 });

@@ -1,0 +1,160 @@
+trigger: none
+
+parameters:
+- name: Env
+  displayName: Environment
+  type: string
+  default: STAGING
+  values: [DEV, QA, STAGING, PROD]
+
+- name: Browser
+  displayName: Browser
+  type: string
+  default: chromium
+  values: [chromium, firefox, webkit]
+
+- name: Tags
+  displayName: BDD Tags
+  type: string
+  default: '@Smoke'
+
+- name: PoolName
+  displayName: Agent Pool
+  type: string
+  default: 'Default'
+  values: ['Default', 'Azure Pipelines']
+
+- name: EmailRecipients
+  displayName: Email Notification Recipients (Semicolon separated)
+  type: string
+  default: 'test@example.com'
+
+variables:
+  npm_config_cache: $(Pipeline.Workspace)/.npm
+
+jobs:
+- job: PlaywrightTests
+  ${{ if eq(parameters.PoolName, 'Azure Pipelines') }}:
+    pool:
+      vmImage: 'ubuntu-latest'
+  ${{ else }}:
+    pool:
+      name: ${{ parameters.PoolName }}
+  
+  timeoutInMinutes: 60
+  steps:
+  # Initial Setup (Only for Hosted Agents)
+  - ${{ if eq(parameters.PoolName, 'Azure Pipelines') }}:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '20.x'
+      displayName: 'Install Node.js'
+
+    - task: Cache@2
+      inputs:
+        key: 'npm | "$(Agent.OS)" | package-lock.json'
+        restoreKeys: |
+          npm | "$(Agent.OS)"
+        path: $(npm_config_cache)
+      displayName: 'Cache npm'
+
+  # Core Execution
+  # In Linux we use npm ci instead of npm install
+  - script: npm ci
+    displayName: 'npm clean install'
+    env:
+      npm_config_cache: $(npm_config_cache)
+
+  - script: npx playwright install --with-deps
+    displayName: 'Install Playwright Browsers'
+
+  - script: node scripts/run-bdd.js ${{ parameters.Env }} --browser=${{ parameters.Browser }} "${{ parameters.Tags }}"
+    displayName: 'Run Playwright BDD Tests'
+    env:
+      BUILD_NUMBER: $(Build.BuildNumber)
+    continueOnError: true
+
+  # Reporting
+  - task: PublishTestResults@2
+    condition: succeededOrFailed()
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'results.xml'
+      mergeTestResults: true
+      testRunTitle: 'Playwright BDD - ${{ parameters.Env }} - ${{ parameters.Browser }}'
+    displayName: 'Publish Test Results'
+
+  # ==============================================================================
+  # ALLURE REPORTING SECTION
+  # ==============================================================================
+  # Step 1: Prepare metadata (Environment & Executor info)
+  - script: |
+      mkdir -p allure-results
+      echo "Browser=${BROWSER}" > allure-results/environment.properties
+      echo "Environment=${TEST_ENV}" >> allure-results/environment.properties
+      echo "BuildNumber=${BUILD_NUMBER}" >> allure-results/environment.properties
+      echo "Executor=AzurePipelines" >> allure-results/environment.properties
+      
+      # Create links back to this specific Azure DevOps build in the report
+      printf '{"name":"Azure Pipelines","type":"azure","reportName":"Playwright BDD Report","url":"%s","buildOrder":"%s","buildName":"%s","buildUrl":"%s"}' "$URL" "$BUILD_ID" "$BUILD_NUMBER" "$URL" > allure-results/executor.json
+    displayName: 'Allure: Prepare Metadata'
+    condition: succeededOrFailed()
+    env:
+      BROWSER: ${{ parameters.Browser }}
+      TEST_ENV: ${{ parameters.Env }}
+      BUILD_ID: $(Build.BuildId)
+      BUILD_NUMBER: $(Build.BuildNumber)
+      URL: $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.Id)
+
+  # Step 2: Generate Report Manually
+  # Extension v2 works best when we provide the pre-generated report folder.
+  - script: |
+      npx allure generate allure-results --clean -o allure-report
+    displayName: 'Allure: Generate Report Folder'
+    condition: succeededOrFailed()
+
+  # Step 3: Publish Allure Report (Using Extension v2.1.0)
+  # IMPORTANT: This task requires 'PublishAllureReport@2' from the Qameta extension.
+  - task: PublishAllureReport@2
+    displayName: 'Allure: Publish to Tab'
+    condition: succeededOrFailed()
+    continueOnError: true
+    inputs:
+      reportDir: 'allure-report'
+      testResultsDir: 'allure-results'
+      allureVersion: '2.34.1'
+      reportName: 'Allure Report'
+
+  # Step 4: Publish as Artifact (Downloadable zip)
+  - task: PublishPipelineArtifact@1
+    condition: succeededOrFailed()
+    inputs:
+      targetPath: 'allure-report'
+      artifact: 'AllureReport'
+      publishLocation: 'pipeline'
+    displayName: 'Allure: Publish Artifact'
+  # ==============================================================================
+
+  - task: PublishPipelineArtifact@1
+    condition: succeededOrFailed()
+    inputs:
+      targetPath: 'PlaywrightAutomationResult'
+      artifact: 'PlaywrightReport'
+      publishLocation: 'pipeline'
+    displayName: 'Publish HTML Report'
+
+  # Notification
+  - script: node scripts/post-build-email.js
+    displayName: 'Send Email Notification'
+    condition: succeededOrFailed()
+    env:
+      TEST_ENV: ${{ parameters.Env }}
+      BROWSER: ${{ parameters.Browser }}
+      BDD_TAGS: ${{ parameters.Tags }}
+      BUILD_NUMBER: $(Build.BuildNumber)
+      REPORT_URL: "$(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.Id)&view=ms.vss-test-web.test-result-details"
+      SMTP_HOST: $(SMTP_HOST)
+      SMTP_PORT: $(SMTP_PORT)
+      SMTP_USER: $(SMTP_USER)
+      SMTP_PASS: $(SMTP_PASS)
+      EMAIL_RECIPIENT: ${{ parameters.EmailRecipients }}
