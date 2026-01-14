@@ -1,32 +1,74 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.057267">
-<testsuite name="src\features\SimpleSearch.feature.spec.js" timestamp="2026-01-14T08:22:15.991Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.564" errors="0">
-<testcase name="Simple Web Search › Verify Google search functionality" classname="src\features\SimpleSearch.feature.spec.js" time="5.564">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="8.707014">
+<testsuite name="src\features\SimpleSearch.feature.spec.js" timestamp="2026-01-14T14:49:46.496Z" hostname="chromium" tests="1" failures="1" skipped="0" time="6.546" errors="0">
+<testcase name="Simple Web Search › Verify Google search functionality" classname="src\features\SimpleSearch.feature.spec.js" time="6.546">
+<failure message="SimpleSearch.feature.spec.js:4:3 Verify Google search functionality" type="FAILURE">
+<![CDATA[  [chromium] › src\features\SimpleSearch.feature.spec.js:4:3 › Simple Web Search › Verify Google search functionality @smoke @SimpleSearch › Then I should see search results related to "Playwright" 
+
+    Error: Element not visible for verification.
+
+       at ..\src\executor\Executor.ts:169
+
+      167 |                         if (action.element) {
+      168 |                             const locator = await this.finder.findElement(action.element);
+    > 169 |                             if (!await locator.isVisible()) throw new Error(`Element not visible for verification.`);
+          |                                                                   ^
+      170 |                         }
+      171 |                         break;
+      172 |                     case 'DRAG_DROP':
+        at Executor.executeStep (C:\Chari_Local\AzureDevOps\PlaywrightDemo\src\executor\Executor.ts:169:67)
+        at Object.universalHandler (C:\Chari_Local\AzureDevOps\PlaywrightDemo\src\steps\universal.steps.ts:23:5)
+        at C:\Chari_Local\AzureDevOps\PlaywrightDemo\.features-gen\src\features\SimpleSearch.feature.spec.js:9:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[[Registry] Registered manual step: /user selects country "(.*)"/
 [Registry] Registered manual step: /enters location "(.*)" from suggestion/
-2026-01-14T08:22:17.369Z INFO  [Universal]: Processing step: "I navigate to "https://www.google.com""
-2026-01-14T08:22:17.371Z INFO  [Executor]: Performing: NAVIGATE - Navigate to URL
-2026-01-14T08:22:21.012Z INFO  [Executor]: Performing: SCREENSHOT - Page after navigation
-2026-01-14T08:22:21.108Z INFO  [Universal]: Processing step: "I search for "Playwright Automation""
-2026-01-14T08:22:21.109Z INFO  [Executor]: Performing: TYPE - Enter search text
-2026-01-14T08:22:21.116Z INFO  [SmartFinder]: Searching for: input
-2026-01-14T08:22:21.139Z INFO  [SmartFinder]: Match Found: Exact XPath
-2026-01-14T08:22:21.244Z INFO  [Executor]: Performing: PRESS_KEY - Press Enter
-2026-01-14T08:22:21.283Z INFO  [Executor]: Performing: WAIT_NAVIGATION - Wait for results to load
-2026-01-14T08:22:21.287Z INFO  [Executor]: Performing: SCREENSHOT - After search
-2026-01-14T08:22:21.583Z INFO  [Universal]: Processing step: "I should see search results related to "Playwright""
-2026-01-14T08:22:21.584Z INFO  [Executor]: Performing: VERIFY_TEXT - Verify search results contain text
-2026-01-14T08:22:22.328Z INFO  [SmartFinder]: Searching for: body
-2026-01-14T08:22:22.355Z INFO  [SmartFinder]: Match Found: Exact XPath
-2026-01-14T08:22:22.387Z INFO  [Executor]: Performing: SCREENSHOT - Verification screenshot
+2026-01-14T14:49:48.500Z INFO  [Universal]: Processing step: "I navigate to "https://www.google.com""
+2026-01-14T14:49:48.502Z INFO  [Executor]: Performing: NAVIGATE - Navigate to URL
+2026-01-14T14:49:52.801Z INFO  [Executor]: Performing: SCREENSHOT - Page after navigation
+2026-01-14T14:49:52.922Z INFO  [Universal]: Processing step: "I search for "Playwright Automation""
+2026-01-14T14:49:52.924Z INFO  [Executor]: Performing: TYPE - Enter search text
+2026-01-14T14:49:52.933Z INFO  [SmartFinder]: Searching for: input
+2026-01-14T14:49:52.962Z INFO  [SmartFinder]: Match Found: Exact XPath
+2026-01-14T14:49:53.071Z INFO  [Executor]: Performing: PRESS_KEY - Press Enter
+2026-01-14T14:49:53.094Z INFO  [Executor]: Performing: WAIT_NAVIGATION - Wait for results to load
+2026-01-14T14:49:53.097Z INFO  [Executor]: Performing: SCREENSHOT - After search
+2026-01-14T14:49:53.334Z INFO  [Universal]: Processing step: "I should see search results related to "Playwright""
+2026-01-14T14:49:53.335Z INFO  [Executor]: Performing: VERIFY_ELEMENT - Verify search results container is visible
+2026-01-14T14:49:54.299Z INFO  [SmartFinder]: Searching for: div
 
-[[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\test-finished-1.png]]
+[[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\test-failed-1.png]]
 
 [[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\error-context.md]]
 
 [[ATTACHMENT|test-results\src-features-SimpleSearch.-83244-Google-search-functionality-chromium\trace.zip]]
 ]]>
 </system-out>
+<system-err>
+<![CDATA[2026-01-14T14:49:54.330Z WARN  [SmartFinder]: Primary locators failed for "div". Triggering Self-Healing...
+2026-01-14T14:49:54.331Z ERROR [SmartFinder]: ALL STRATEGIES FAILED for div
+]]>
+</system-err>
 </testcase>
 </testsuite>
 </testsuites>
