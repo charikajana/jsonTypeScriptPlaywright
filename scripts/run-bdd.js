@@ -51,6 +51,19 @@ const currentEnv = process.env.TEST_ENV || 'DEV';
 const currentTags = process.env.BDD_TAGS || 'No tags (running all)';
 const currentWorkers = process.env.PLAYWRIGHT_WORKERS || 'Default';
 
+// Clean Allure directories
+const allureResultsDir = path.join(projectRoot, 'allure-results');
+const allureReportDir = path.join(projectRoot, 'allure-report');
+
+if (fs.existsSync(allureResultsDir)) {
+    console.log(`> Cleaning ${allureResultsDir}...`);
+    fs.rmSync(allureResultsDir, { recursive: true, force: true });
+}
+if (fs.existsSync(allureReportDir)) {
+    console.log(`> Cleaning ${allureReportDir}...`);
+    fs.rmSync(allureReportDir, { recursive: true, force: true });
+}
+
 console.log(`--- Starting BDD Execution ---`);
 console.log(`Environment: ${currentEnv}`);
 console.log(`Browser:     ${browser}`);
@@ -61,10 +74,6 @@ const runCommand = (cmd, args) => {
     const isWindows = process.platform === 'win32';
     const command = isWindows ? `${cmd}.cmd` : cmd;
     const result = spawnSync(command, args, { stdio: 'inherit', shell: true, env: process.env, cwd: projectRoot });
-    if (result.status !== 0) {
-        console.error(`Command failed with exit code ${result.status}: ${cmd} ${args.join(' ')}`);
-        process.exit(result.status || 1);
-    }
     return result;
 };
 
@@ -74,7 +83,17 @@ runCommand('npx', ['bddgen']);
 
 // 2. Run playwright test
 console.log(`> Running Playwright tests on ${browser}...`);
-runCommand('npx', ['playwright', 'test', '--project', browser]);
+const testResult = runCommand('npx', ['playwright', 'test', '--project', browser]);
+
+// 3. Generate Allure report
+console.log('> Generating Allure report...');
+try {
+    runCommand('npx', ['allure', 'generate', 'allure-results', '--clean', '-o', 'allure-report']);
+    console.log('> Allure report generated in "allure-report" folder.');
+} catch (error) {
+    console.error('> Failed to generate Allure report:', error.message);
+}
 
 console.log(`--- Execution Finished ---`);
+process.exit(testResult.status || 0);
 
