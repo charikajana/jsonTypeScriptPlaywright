@@ -7,3 +7,6 @@ allure-report
 PlaywrightAutomationResult
 test-results
 results.xml
+.playwright-mcp
+.vscode
+results.xml
